@@ -3237,8 +3237,8 @@ uint getBogusComparisons(Token[] v,
       if (0 < lhsLParenCount) {
         lhsExprHead ~= lhs.length;
       } else {
-        specialTokenHead.clear;
-        lhs.clear;
+        specialTokenHead.destroy;
+        lhs.destroy;
         lhsExprHead = [0];
         lhsLParenCount = 0;
       }
